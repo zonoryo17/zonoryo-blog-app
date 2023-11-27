@@ -34,15 +34,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      id: id,
+      id,
     },
   };
 };
 
 const BlogDetail: NextPage<{ id: string }> = ({ id }) => {
-  console.log('id', id);
-
-  return <div>BlogDetail</div>;
+  return (
+    <>
+      <div>BlogDetail</div>
+      <p>{id}</p>
+    </>
+  );
 };
 
 export default BlogDetail;
