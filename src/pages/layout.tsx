@@ -1,5 +1,5 @@
-import Footer from '@/components/molecules/Footer';
-import Header from '@/components/molecules/Header';
+import Footer from '@/components/Elements/Footer';
+import Header from '@/components/Elements/Header';
 
 type Props = {
   children: React.ReactNode;

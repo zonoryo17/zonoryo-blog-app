@@ -1,10 +1,30 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
+import { client } from '@/libs/microCMS';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+//ブログ一覧取得
+export const getBlogs = async () => {
+  const blog = await client.get({
+    endpoint: 'blogs',
+  });
+
+  return blog.contents;
+};
+
+export async function getStaticProps() {
+  const allPostsData = await getBlogs();
+
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home(allPostsData: any) {
   return (
     <>
       <Head>
