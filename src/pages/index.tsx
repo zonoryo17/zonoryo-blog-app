@@ -21,8 +21,6 @@ export async function getStaticProps() {
 
 // FIXME: 型を修正する。
 export const Home = (allPostData: any) => {
-  console.log('元データ', allPostData);
-
   return <HomeMainPage {...allPostData} />;
 };
 

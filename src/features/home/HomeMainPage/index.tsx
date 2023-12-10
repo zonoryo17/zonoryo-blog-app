@@ -8,8 +8,6 @@ type Props = {
 };
 
 export default function HomeMainPage(allPostsData: Props) {
-  console.log('allPostData', allPostsData);
-
   const items = allPostsData.allPostsData;
 
   return (
