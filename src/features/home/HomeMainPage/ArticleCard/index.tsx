@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { container, contentSection, title } from './style.css';
-import { Blog } from '@/types/blog';
+import type { Blog } from '@/types/blog';
 
 type Props = {
   item: Blog;

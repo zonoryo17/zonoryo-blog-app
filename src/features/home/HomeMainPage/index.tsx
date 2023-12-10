@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import ArticleCard from '@/features/home/HomeMainPage/ArticleCard';
 import { container, main } from './style.css';
-import { Blog } from '@/types/blog';
+import type { Blog } from '@/types/blog';
 
 type Props = {
   allPostsData: Blog[];
