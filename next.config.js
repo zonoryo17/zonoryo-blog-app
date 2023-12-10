@@ -1,9 +1,18 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
+/**
+ * Vanilla-Extractの設定
+ */
+const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
+const withVanillaExtract = createVanillaExtractPlugin();
+
 /** Next.jsの設定値 */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ['images.microcms-assets.io'], // 使用するホスト名をここに追加
+  },
   /** WebPack の設定を追加 */
   webpack: (config) => {
     // Vue と同じように 「@ = src/」,「~ = src/」に設定する。
@@ -23,10 +32,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
-
-module.exports = {
-  images: {
-    domains: ['images.microcms-assets.io'], // 使用するホスト名をここに追加
-  },
-};
+module.exports = withVanillaExtract(nextConfig);

@@ -1,15 +1,15 @@
-import styles from '@/styles/Header.module.scss';
 import Image from 'next/image';
+import { container, profileIconBtn, profileImage } from './style.css';
 
 export default function Header() {
   return (
-    <div className={styles.container}>
+    <div className={container}>
       <h1>Zonoryo Blog</h1>
-      <button className={styles.profileIconBtn}>
+      <button className={profileIconBtn}>
         <Image
           src="/images/profileImage.jpg"
           alt="プロフィール画像"
-          className={styles.profileImage}
+          className={profileImage}
           width={80}
           height={80}
         />
