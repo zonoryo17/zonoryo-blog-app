@@ -16,6 +16,10 @@ export const container = style({
   },
 });
 
+export const thumbnail = style({
+  borderRadius: '6px 6px 0 0',
+});
+
 export const contentSection = style({
   padding: spacing.l,
 });

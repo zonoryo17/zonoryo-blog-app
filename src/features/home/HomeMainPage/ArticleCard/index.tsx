@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { container, contentSection, title } from './style.css';
+import { container, contentSection, thumbnail, title } from './style.css';
 import type { Blog } from '@/types/blog';
 
 type Props = {
@@ -14,7 +14,7 @@ export default function ArticleCard({ item }: Props) {
         width="350"
         height="200"
         alt="画像"
-        style={{ borderRadius: '6px 6px 0 0' }}
+        className={thumbnail}
       />
       <div className={contentSection}>
         <p className={title}>{item.title}</p>
