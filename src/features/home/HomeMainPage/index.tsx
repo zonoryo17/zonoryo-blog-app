@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import ArticleCard from '@/features/home/HomeMainPage/ArticleCard';
-import { container, main } from './style.css';
+import { main } from './style.css';
 import type { Blog } from '@/types/blog';
+import ArticleList from './ArticleList';
 
 type Props = {
   allPostsData: Blog[];
@@ -20,11 +20,7 @@ export default function HomeMainPage(allPostsData: Props) {
       </Head>
 
       <main className={main}>
-        <div className={container}>
-          {items.map((item: Blog) => (
-            <ArticleCard key={item.id} item={item} />
-          ))}
-        </div>
+        <ArticleList items={items} />
       </main>
     </>
   );

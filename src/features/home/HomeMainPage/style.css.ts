@@ -8,10 +8,3 @@ export const main = style({
   backgroundColor: colors.white,
   padding: spacing.xl,
 });
-
-export const container = style({
-  width: '100%',
-  height: '100%',
-  display: 'flex',
-  gap: spacing.xl,
-});
