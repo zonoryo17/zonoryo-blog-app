@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { container, contentSection, thumbnail, title } from './style.css';
-import type { Blog } from '@/types/blog';
+import type { Article } from '@/types/article';
 
 type Props = {
-  item: Blog;
+  item: Article;
 };
 
 export default function ArticleCard({ item }: Props) {

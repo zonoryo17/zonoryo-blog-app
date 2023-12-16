@@ -1,9 +1,9 @@
-import { Blog } from '@/types/blog';
+import { Article } from '@/types/article';
 import { container } from './style.css';
 import ArticleCard from '../ArticleCard';
 
 type Props = {
-  items: Blog[];
+  items: Article[];
 };
 
 export default function ArticleList({ items }: Props) {

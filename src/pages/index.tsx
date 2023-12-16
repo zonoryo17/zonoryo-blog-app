@@ -2,15 +2,15 @@ import HomeMainPage from '@/features/home/HomeMainPage';
 import { client } from '@/libs/microCMS';
 
 //ブログ一覧取得
-export const getBlogs = async () => {
-  const blog = await client.get({
-    endpoint: 'blogs',
+export const getArticles = async () => {
+  const article = await client.get({
+    endpoint: 'articles',
   });
 
-  return blog.contents;
+  return article.contents;
 };
 export async function getStaticProps() {
-  const allPostsData = await getBlogs();
+  const allPostsData = await getArticles();
 
   return {
     props: {
