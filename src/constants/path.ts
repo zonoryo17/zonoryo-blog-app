@@ -5,10 +5,7 @@ const BASE = {
 
 const ARTICLES = {
   articleDetail: (id) => `/articles/${id}`,
-} as const satisfies Record<
-  string,
-  `/articles/${string}` | ((id: string) => `/articles/${string}`)
->;
+} as const satisfies Record<string, (id: string) => `/articles/${string}`>;
 
 // ディレクトリ（ドメイン）ごとのオブジェクトをpath内でマージする
 export const path = {
