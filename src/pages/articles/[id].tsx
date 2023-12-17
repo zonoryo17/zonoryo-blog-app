@@ -39,13 +39,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const BlogDetail: NextPage<{ id: string }> = ({ id }) => {
+const ArticleDetail: NextPage<{ id: string }> = ({ id }) => {
   return (
     <>
-      <div>BlogDetail</div>
+      <div>ArticleDetail</div>
       <p>{id}</p>
     </>
   );
 };
 
-export default BlogDetail;
+export default ArticleDetail;

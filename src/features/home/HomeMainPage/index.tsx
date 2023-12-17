@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import { main } from './style.css';
-import type { Blog } from '@/types/blog';
-import ArticleList from './ArticleList';
+import type { Article } from '@/types/article';
+import ArticleList from '@/features/articles/components/ArticleList';
 
 type Props = {
-  allPostsData: Blog[];
+  allPostsData: Article[];
 };
 
 export default function HomeMainPage(allPostsData: Props) {
