@@ -1,10 +1,10 @@
 // ディレクトリ（ドメイン）ごとにオブジェクトを作成する
 const BASE = {
-  home: '/',
+  HOME: '/',
 } as const satisfies Record<string, `/${string}`>;
 
 const ARTICLES = {
-  articleDetail: (id) => `/articles/${id}`,
+  ARTICLE_DETAIL: (id) => `/articles/${id}`,
 } as const satisfies Record<string, (id: string) => `/articles/${string}`>;
 
 // ディレクトリ（ドメイン）ごとのオブジェクトをpath内でマージする

@@ -13,7 +13,7 @@ export default function ArticleList({ items }: Props) {
     <div className={container}>
       {items.map((item) => (
         <Link
-          href={path.articleDetail(item.id)}
+          href={path.ARTICLE_DETAIL(item.id)}
           key={item.id}
           className={articleCardLink}
         >
