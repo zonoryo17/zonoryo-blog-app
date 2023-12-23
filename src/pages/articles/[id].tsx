@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import ArticleDetailPage from '@/features/articles/ArticleDetailPage';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
@@ -42,7 +43,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const ArticleDetail: NextPage<{ id: string }> = ({ id }) => {
   return (
     <>
-      <div>ArticleDetail</div>
+      <ArticleDetailPage />
       <p>{id}</p>
     </>
   );
