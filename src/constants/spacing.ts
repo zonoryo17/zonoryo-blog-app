@@ -1,10 +1,4 @@
-type Spacing = {
-  s: string;
-  m: string;
-  l: string;
-  xl: string;
-  xxl: string;
-};
+type Spacing = 's' | 'm' | 'l' | 'xl' | 'xxl';
 
 export const spacing = {
   s: '4px',
@@ -12,4 +6,4 @@ export const spacing = {
   l: '16px',
   xl: '24px',
   xxl: '32px',
-} as const satisfies Record<keyof Spacing, string>;
+} as const satisfies Record<Spacing, string>;
